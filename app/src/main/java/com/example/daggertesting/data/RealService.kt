@@ -3,6 +3,7 @@ package com.example.daggertesting.data
 import javax.inject.Inject
 
 class RealService @Inject constructor() {
+
     fun loadData(): String {
         return "This is not fake data"
     }

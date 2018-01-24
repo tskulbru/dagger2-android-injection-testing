@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProvider
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import com.example.daggertesting.R
 import com.example.daggertesting.ui.details.DetailsActivity
 import dagger.android.support.DaggerAppCompatActivity
@@ -33,7 +34,8 @@ class MainActivity : DaggerAppCompatActivity() {
 
         Handler().postDelayed({
             runOnUiThread({
-                text.text = viewModel.fetchDataFromService()
+                textView.visibility = View.VISIBLE
+                textView.text = viewModel.fetchDataFromService()
             })
         }, 2000)
     }
