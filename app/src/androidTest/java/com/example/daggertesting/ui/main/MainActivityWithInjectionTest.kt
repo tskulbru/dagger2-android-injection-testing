@@ -12,6 +12,9 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+/**
+ * This test should just continue to use whatever we've set up in the dagger graph.
+ */
 @RunWith(AndroidJUnit4::class)
 @SmallTest
 class MainActivityWithInjectionTest {
@@ -19,7 +22,7 @@ class MainActivityWithInjectionTest {
     val activityTestRule = ActivityTestRule<MainActivity>(MainActivity::class.java)
 
     @Test
-    fun exampleTest() {
+    fun shouldShowTextFromInjectedViewModelInDaggerGraph() {
         onView(withId(R.id.button)).check(matches(isDisplayed()))
 
         Thread.sleep(3000)

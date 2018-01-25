@@ -7,7 +7,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.dagger2testingwithandroidinjector"
-        minSdkVersion 26
+        minSdkVersion 25
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -35,7 +35,8 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
 
-    androidTestImplementation 'org.mockito:mockito-core:2.13.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito:2.12.1'
+    androidTestImplementation 'com.github.tmurakami:dexopener:0.12.1'
 }

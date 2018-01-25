@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProvider
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.support.annotation.VisibleForTesting
 import android.view.View
 import com.example.daggertesting.R
 import com.example.daggertesting.ui.details.DetailsActivity
@@ -13,6 +14,7 @@ import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity() {
     @Inject
+    @VisibleForTesting
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private lateinit var viewModel: MainActivityViewModel
